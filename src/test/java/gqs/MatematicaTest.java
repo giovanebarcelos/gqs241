@@ -2,16 +2,21 @@ package gqs;
 
 import static org.junit.Assert.assertEquals;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class MatematicaTest {
-    @Test
-    public void deveSomar(){
+    Matematica matematica;
+
+    @Before
+    public void setUp(){
         // 3A
         // Arrange - Cenário
-        Matematica matematica = 
-            new Matematica();
+        matematica = new Matematica();
+    }
 
+    @Test
+    public void deveSomar(){
         // Action - Ação 
         int resultado = 
             matematica.somar(8, 5);            
@@ -22,11 +27,6 @@ public class MatematicaTest {
 
     @Test
     public void deveSubtrair(){
-        // 3A
-        // Arrange - Cenário
-        Matematica matematica = 
-            new Matematica();
-
         // Action - Ação 
         int resultado = 
             matematica.subtrair(8, 5);            
@@ -37,11 +37,6 @@ public class MatematicaTest {
 
     @Test
     public void deveMultiplicar(){
-        // 3A
-        // Arrange - Cenário
-        Matematica matematica = 
-            new Matematica();
-
         // Action - Ação 
         int resultado = 
             matematica.multiplicar(8, 5);            
@@ -52,11 +47,6 @@ public class MatematicaTest {
 
     @Test
     public void deveDividir() throws DivisionByZeroException{
-        // 3A
-        // Arrange - Cenário
-        Matematica matematica = 
-            new Matematica();
-
         // Action - Ação 
         int resultado = 
             matematica.dividir(9, 3);            
@@ -67,13 +57,8 @@ public class MatematicaTest {
 
     @Test(expected = DivisionByZeroException.class)
     public void naoDeveDividirPorZero() throws DivisionByZeroException{
-        // Arrange
-        Matematica matematica = new Matematica();
-
         // Action 
         int numero = matematica.dividir(3, 0);
     }
-
-
     
 }
