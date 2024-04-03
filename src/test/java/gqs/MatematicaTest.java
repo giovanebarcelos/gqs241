@@ -51,7 +51,7 @@ public class MatematicaTest {
     }
 
     @Test
-    public void deveDividir(){
+    public void deveDividir() throws DivisionByZeroException{
         // 3A
         // Arrange - Cenário
         Matematica matematica = 
@@ -63,6 +63,15 @@ public class MatematicaTest {
 
         // Assert - Asserção
         assertEquals(3, resultado);
+    }
+
+    @Test(expected = DivisionByZeroException.class)
+    public void naoDeveDividirPorZero() throws DivisionByZeroException{
+        // Arrange
+        Matematica matematica = new Matematica();
+
+        // Action 
+        int numero = matematica.dividir(3, 0);
     }
 
 
