@@ -60,5 +60,15 @@ public class MatematicaTest {
         // Action 
         int numero = matematica.dividir(3, 0);
     }
+
+    @Test
+    public void deveCalcularFatorial() {
+        // Action - Ação 
+        int resultado = 
+            matematica.fatorial(5);            
+
+        // Assert - Asserção
+        assertEquals(120, resultado);
+    }
     
 }
