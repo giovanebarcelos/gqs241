@@ -44,7 +44,7 @@ public class MatematicaTest {
 
         // Action - Ação 
         int resultado = 
-            matematica.subtrair(8, 5);            
+            matematica.multiplicar(8, 5);            
 
         // Assert - Asserção
         assertEquals(40, resultado);
