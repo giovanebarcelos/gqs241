@@ -50,6 +50,21 @@ public class MatematicaTest {
         assertEquals(40, resultado);
     }
 
+    @Test
+    public void deveDividir(){
+        // 3A
+        // Arrange - Cenário
+        Matematica matematica = 
+            new Matematica();
+
+        // Action - Ação 
+        int resultado = 
+            matematica.dividir(9, 3);            
+
+        // Assert - Asserção
+        assertEquals(3, resultado);
+    }
+
 
     
 }
