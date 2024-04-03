@@ -36,7 +36,7 @@ public class MatematicaTest {
     }
 
     @Test
-    public void devMultiplicar(){
+    public void deveMultiplicar(){
         // 3A
         // Arrange - Cenário
         Matematica matematica = 
