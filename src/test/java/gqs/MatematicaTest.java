@@ -1,6 +1,8 @@
 package gqs;
 
 import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -69,6 +71,21 @@ public class MatematicaTest {
 
         // Assert - Asserção
         assertEquals(120, resultado);
+    }
+
+    @Test
+    public void deveMultiplicarFake(){
+        // Arrange 
+        Matematica matematicaFake = mock(Matematica.class);
+        
+        // Action 
+        when(matematicaFake.multiplicar(5,8)).
+        thenReturn(400);
+        int resultado = matematicaFake.multiplicar(5, 8);
+
+        // Assert
+        assertEquals(400, resultado);
+        
     }
     
 }
